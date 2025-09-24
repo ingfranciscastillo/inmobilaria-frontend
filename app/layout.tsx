@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import { esMX } from "@clerk/localizations";
+import { shadcn } from "@clerk/themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { ThemeProvider } from "@/components/theme-provider";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -23,12 +23,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider
+      localization={esMX}
+      appearance={{
+        baseTheme: shadcn,
+        signIn: {
+          baseTheme: shadcn,
+        },
+        signUp: {
+          baseTheme: shadcn,
+        },
+      }}
+    >
+      <html lang="es">
+        <body className={`${interSans.variable} antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
