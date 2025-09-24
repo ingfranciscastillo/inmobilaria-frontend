@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "../modeToggle";
+import Logo from "../logo";
 
 const menuItems = [
   { name: "Features", href: "#link" },
@@ -44,7 +45,7 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                Inmobiliaria
+                <Logo />
               </Link>
 
               <button
