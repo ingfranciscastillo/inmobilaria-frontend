@@ -16,20 +16,21 @@ export default function ContactSection() {
     <section className="py-32">
       <div className="mx-auto max-w-3xl px-8 lg:px-0">
         <h1 className="text-center text-4xl font-semibold lg:text-5xl">
-          Contact Sales
+          Contáctanos
         </h1>
         <p className="mt-4 text-center">
-          We’ll help you find the right plan and pricing for your business.
+          Estamos aquí para ayudarte a encontrar, comprar o alquilar la
+          propiedad ideal en la República Dominicana.
         </p>
 
         <Card className="mx-auto mt-12 max-w-lg p-8 shadow-md sm:p-16">
           <div>
             <h2 className="text-xl font-semibold">
-              Let’s get you to the right place
+              Hablemos de tu próximo hogar
             </h2>
             <p className="mt-4 text-sm">
-              Reach out to our sales team! We’re eager to learn more about how
-              you plan to use our application.
+              Cuéntanos tus necesidades y nuestro equipo te asesorará para
+              encontrar la mejor propiedad, proyecto o inversión.
             </p>
           </div>
 
@@ -38,17 +39,17 @@ export default function ContactSection() {
             className="**:[&>label]:block mt-12 space-y-6 *:space-y-3"
           >
             <div>
-              <Label htmlFor="name">Full name</Label>
+              <Label htmlFor="name">Nombre completo</Label>
               <Input type="text" id="name" required />
             </div>
 
             <div>
-              <Label htmlFor="email">Work Email</Label>
+              <Label htmlFor="email">Correo electrónico</Label>
               <Input type="email" id="email" required />
             </div>
 
             <div>
-              <Label htmlFor="country">Country/Region</Label>
+              <Label htmlFor="country">Ciudad / Región</Label>
               <Select>
                 <SelectTrigger>
                   <SelectValue placeholder="Select Country/Region" />
@@ -62,34 +63,30 @@ export default function ContactSection() {
             </div>
 
             <div>
-              <Label htmlFor="website">Company Website</Label>
-              <Input type="url" id="website" />
-              <span className="text-muted-foreground inline-block text-sm">
-                Must start with &apos;https&apos;
-              </span>
-            </div>
-
-            <div>
-              <Label htmlFor="job">Job function</Label>
+              <Label htmlFor="job">Tipo de propiedad / Interés</Label>
               <Select>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select Job Function" />
+                  <SelectValue placeholder="Selecciona el tipo de propiedad" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="1">Finance</SelectItem>
-                  <SelectItem value="2">Education</SelectItem>
-                  <SelectItem value="3">Legal</SelectItem>
-                  <SelectItem value="4">More</SelectItem>
+                  <SelectItem value="1">Compra</SelectItem>
+                  <SelectItem value="2">venta</SelectItem>
+                  <SelectItem value="3">alquiler</SelectItem>
+                  <SelectItem value="4">inversión</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div>
-              <Label htmlFor="msg">Message</Label>
-              <Textarea id="msg" rows={3} />
+              <Label htmlFor="msg">Mensaje</Label>
+              <Textarea
+                id="msg"
+                rows={3}
+                placeholder="Cuéntanos más sobre lo que buscas"
+              />
             </div>
 
-            <Button>Submit</Button>
+            <Button>Enviar mensaje</Button>
           </form>
         </Card>
       </div>

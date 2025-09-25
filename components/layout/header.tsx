@@ -8,10 +8,10 @@ import { ModeToggle } from "../modeToggle";
 import Logo from "../logo";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "/about" },
+  { name: "Inicio", href: "/" },
+  { name: "Propiedades", href: "/propiedades" },
+  { name: "Nosotros", href: "/about" },
+  { name: "Contacto", href: "/contacto" },
 ];
 
 export const HeroHeader = () => {
@@ -45,7 +45,7 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Logo />
+                <Logo width={70} height={70} />
               </Link>
 
               <button

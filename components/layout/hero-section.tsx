@@ -11,25 +11,27 @@ export const HeroSection = () => (
           <div className="flex gap-4 flex-col">
             <div className="flex gap-4 flex-col">
               <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
-                This is the start of something!
+                Encuentra tu próximo hogar en RD!
               </h1>
               <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Casas, apartamentos y terrenos en venta o alquiler. Te ayudamos
+                a dar el siguiente paso con seguridad y confianza.
               </p>
             </div>
             <div className="flex flex-row gap-4">
               <Button size="lg" className="gap-4" variant="outline">
-                Jump on a call <PhoneCall className="w-4 h-4" />
+                Ver Propiedades <MoveRight className="size-4" />
               </Button>
               <Button size="lg" className="gap-4">
-                Sign up here <MoveRight className="w-4 h-4" />
+                Habla con un asesor <PhoneCall className="size-4" />
               </Button>
             </div>
           </div>
-          <img src="/hero/hero3.jpg" alt="hero-image" className="object-fill" />
+          <img
+            src="/hero/hero3.jpg"
+            alt="hero-image"
+            className="object-cover rounded-2xl"
+          />
         </div>
       </div>
     </header>
